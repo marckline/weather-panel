@@ -6,7 +6,7 @@ The project begins as a "scratch your own itch" endeavor for its original author
 
 # How do I get started?
 
-Fork the weather-panel respository, obtain API keys from Weather Underground and Dark Sky, get the latitude and longitude of the location you'd like to track the weather for, and input them into the variables atop the script.js file. Then, just load the index.htm file into your favorite browser.
+Clone the weather-panel respository, obtain API keys from Weather Underground and Dark Sky, get the latitude and longitude of the location you'd like to track the weather for, and input them into the variables atop the script.js file. Then, just load the index.htm file into your favorite browser.
 
 # Where do I obtain API keys for Weather Underground and Dark Sky?
 
