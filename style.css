@@ -1,0 +1,212 @@
+body {
+	font-family: Georgia;
+	background-color: #333;
+}
+
+#container {
+	background-color: #fff;
+	width: 1120px;
+	overflow: auto;
+	margin:15px auto 0;
+}
+
+#container h1 {
+	clear: both;
+	color: #fff;
+	background-color: #0062FF;
+	display: block;
+	font: normal 28px Cutive;	
+	padding: 15px 0 25px 15px;
+	margin-bottom: 15px;
+	text-shadow: 1px 1px #000;
+	box-shadow: 0px 1px 1px #bbb;
+	width: 100%;
+	height: 10px;
+} 
+
+#right {
+	float: left;
+	width: 462px;
+	margin: 0;
+	padding: 0;
+}
+
+#loader {
+	position: absolute;
+	top: 367px;
+	left: 284px;
+}
+
+#left {
+	position: relative;
+	
+}
+
+#radar, #radar2 {
+	width: 633px;
+	height: 800px;
+	float: left;
+	background-color: #eee;
+	margin: 10px 0 10px 10px;
+}
+
+#radar2 {
+	display: none;
+}
+
+
+#darkSky, #forecast {
+	float: left;
+	width: 477px;
+}
+
+#darkSky div {
+	margin: 0 0 10px 15px;
+	font-size: 18px;
+}
+
+#powered-by-ds {
+	margin-left: 360px;
+}
+
+canvas {
+	display: block;
+	float: left;
+	margin-left: 15px;
+}
+
+#precip-chart-label {
+	width: 461px;
+	margin-left: 11px;
+	position: relative;
+	top: -5px;
+}
+
+#forecast {    
+}
+
+#forecast div {
+	margin: 0 0 5px 15px;
+	clear: both;
+}
+
+#forecast img {
+	margin: -5px 10px 0 0;
+	width: 50px;
+	height: 50px;
+}
+
+#forecast p {
+	float: right;
+	margin: 0 25px 10px 0;
+	width: 358px;
+	font-size: 14px;
+}
+
+#hourly {
+	display: none;
+	width: 462px;
+	font-size: 12px;
+	margin-left:15px;
+}
+
+#hourly img {
+	float: left;
+	margin-right: 10px;
+	width: 25px;
+	height: 25px;
+}
+
+#hourly > div {
+	clear: both;
+}
+
+#hourly > div > div {
+	padding-top: 5px;
+	width: 375px;
+}
+
+#current {
+	width: 100%;
+	height: 80px;
+	margin-bottom: 30px;
+}
+
+#current > img {
+	width: 1px;
+	float: left;
+}
+
+#temperature, #humidity, #wind {
+	float: left;
+	width: 115px;
+}
+
+#temperature > img, #humidity > img, #wind > img {
+	float: left;
+}
+
+#temperature > div, #humidity > div, #wind > div {
+	float: left;
+}
+
+#temperature {
+	margin:0 12px 0 25px;
+}
+
+#temperature > div {
+	width: 75px;
+	text-align: center;
+}
+
+#temperature > div > div {
+	font-size: 32px;
+	height: 55px;
+	padding-top: 20px;
+	margin-left: 4px;
+}
+
+#temperature > div > img {
+	margin-left: 4px;
+}
+
+#humidity {
+	margin: 0 12px 0 12px;
+}
+
+#humidity > div {
+	width: 65px;
+	text-align: center;
+	padding-left: 10px;
+}
+
+#humidity > div > div {
+	font-size: 32px;
+	height: 60px;
+	padding-top: 15px;
+}
+
+#wind {
+	margin: 0 25px 0 12px;
+}
+
+#wind > div {
+	width: 35px;
+}
+
+#wind > div > div {
+	font-size: 22px;
+	margin-left: 10px;
+	height: 60px;
+	padding-top: 15px;
+}
+
+#wind > div > img {
+	margin-left: 12px;
+}
+
+#source-banner {
+	display: block;
+	width: 415px;
+	margin: 7px auto;
+}

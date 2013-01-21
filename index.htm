@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Weather Panel</title>
+	<link href="style.css" type="text/css" rel="stylesheet" />
+	<link href='http://fonts.googleapis.com/css?family=Cutive' rel='stylesheet' type='text/css'>
+
+	<script id="current-template" type="text/x-handlebars-template">
+	{{#with current_observation}}
+
+	<div id="temperature">
+		<img src="images/temperature-icon.png" />
+		<div>
+			<div>{{#temp_f}}{{round this}}{{/temp_f}}&deg;F</div>
+			<img src="images/temperature-label.png" />
+		</div>
+	</div>
+
+	<img src="images/vertical-gray-line.png" />
+
+	<div id="humidity">
+		<img src="images/humidity-icon.png" />
+		<div>
+			<div>{{relative_humidity}}</div>
+			<img src="images/humidity-label.png" />
+		</div>
+	</div>
+
+	<img src="images/vertical-gray-line.png" />
+
+	<div id="wind">
+		<img src="images/wind-icon.png" />
+		<div>
+			<div>{{wind_mph}}mph<br/>{{wind_dir}}</div>
+			<img src="images/wind-label.png" />
+		</div>
+	</div>
+
+	{{/with}}
+	</script>
+
+	<script id="darksky-template" type="text/x-handlebars-template">
+	<div>{{#hourSummary}}{{capitalize this}}{{/hourSummary}}</div>
+	</script>
+
+	<script id="forecast-template" type="text/x-handlebars-template">
+	{{#with forecast.txt_forecast}}
+		<div>
+			<img src="{{forecastday.0.icon_url}}" />
+			<p><em>{{forecastday.0.title}}</em> {{forecastday.0.fcttext}}</p>
+		</div>
+		<div>
+			<img src="{{forecastday.1.icon_url}}" />
+			<p><em>{{forecastday.1.title}}</em> {{forecastday.1.fcttext}}</p>
+		</div>
+		<div>
+			<img src="{{forecastday.2.icon_url}}" />
+			<p><em>{{forecastday.2.title}}</em> {{forecastday.2.fcttext}}</p>
+		</div>
+		<div>
+			<img src="{{forecastday.4.icon_url}}" />
+			<p><em>{{forecastday.4.title}}</em> {{forecastday.4.fcttext}}</p>
+		</div>
+	{{/with}}
+	</script>
+
+	<script id="hourly-template" type="text/x-handlebars-template">
+	{{#hourly hourly_forecast}}
+		<div>
+			<img src="{{icon_url}}" />
+			<div><strong>{{FCTTIME.civil}}</strong> {{temp.english}} F, <em>{{condition}}</em>, Wind: {{wspd.english}} mph {{wdir.dir}}</div>
+		</div>
+	{{/hourly}}
+	</script>
+
+</head>
+
+<body>
+
+<div id="container">
+ 
+<div id="left">
+	<img src="images/ajax-loader.gif" id="loader" />
+	<img src="" id="radar" />
+	<img src="" id="radar2" />
+</div>
+
+<div id="right">
+	<h1>Now</h1>
+	<div id="current"></div>
+
+	<h1>Next Hour</h1>
+	<div id="darkSky"><div>Loading ...</div></div>
+	<a href="http://www.darkskyapp.com/"><img src="images/powered-by-ds.png" id="powered-by-ds" /></a>
+	<canvas id="canvas" width="453" height="102"></canvas>
+	<img src="images/precip-chart-label.png" id="precip-chart-label" />
+
+	<h1>Forecast</h1>
+	<div id="forecast"><div>Loading ...</div></div>
+	<div id="hourly">Loading ...</div>
+
+</div> <!-- /#right -->
+
+</div> <!-- /#container -->
+
+<img src="images/data-source-banner.png" id="source-banner" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.1/handlebars.min.js"></script>	
+<script src="script.js"></script>
+
+</body>
+
+</html>
